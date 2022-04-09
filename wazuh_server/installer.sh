@@ -85,9 +85,12 @@ setcap 'cap_net_bind_service=+ep' /usr/share/kibana/node/bin/node
 systemctl daemon-reload
 systemctl enable kibana --now
 
+webui=$(hostname -I | cut -d " " -f 1)
 
 echo "Password for user apm_system: $apm_system"
 echo "Password for user beats_system: $beats_system"
 echo "Password for user elastic: $elastic"
 echo "Password for user kibana: $kibana"
 echo "Password for user kibana_system: $kibana_system"
+echo ""
+echo "Wazuh Instanz ist hier verfügbar https://$webui"
