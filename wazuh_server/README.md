@@ -10,9 +10,11 @@ Die Installation ausgelegt auf KMUs und bietet sinnvolle Standardeinstellungen.
 Die Installation kann wie folgt vorgenommen werden:
 
 1. Login als Root auf dem zukünftigen Wazuh Server
-2. `wget https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/wazuh_server/installer.sh`
-3. `bash installer.sh`
-4. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich
+2. Installieren von Wazuh mit dem Installer
+``` bash 
+wget -O - https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/wazuh_server/installer.sh | bash
+```
+3. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich
 
 
 ### Firewall
