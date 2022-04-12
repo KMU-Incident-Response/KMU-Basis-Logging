@@ -1,0 +1,3 @@
+[submodule "custom_rules"]
+	path = custom_rules
+	url = git@github.com:KMU-Incident-Response/ossec-sysmon.git
