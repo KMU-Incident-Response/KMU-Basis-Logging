@@ -18,7 +18,7 @@ wget -O - https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logg
 
 
 ### Firewall
-Wenn Firewalld verwendet wird müssen folgende Ports freigeschaltet werden.
+Wenn eine Firewall verwendet wird müssen folgende Ports freigeschaltet werden.
 ``` bash
 443/tcp         -  Kibana web interface
 514/UDP/tcp     -  Syslog
@@ -28,7 +28,12 @@ Wenn Firewalld verwendet wird müssen folgende Ports freigeschaltet werden.
 9200/tcp        -  Elasticsearch API
 55000/tcp       -  Wazuh API port for incoming requests.
 ```
-Mit folgendem Command kann dies erreicht werden.
+Mit folgendem Command kann dies auf ufw erreicht werden. (Default auf Ubuntu)
+``` bash
+ufw allow to any proto udp port 514,1514
+ufw allow to any proto tcp port 443,514,1514,1515,1516,9200,55000
+```
+Mit folgendem Command kann dies auf firewalld erreicht werden.
 ``` bash
 firewall-cmd --permanent --add-port={443,514,1514,1515,1516,9200,55000}/tcp
 firewall-cmd --permanent --add-port={514,1514}/udp
