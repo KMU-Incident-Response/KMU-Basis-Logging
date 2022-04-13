@@ -10,7 +10,7 @@ Die Installation ausgelegt auf KMUs und bietet sinnvolle Standardeinstellungen.
 Die Installation wird über den [universal Installer](../universal_installer/README.md) verrichten und kann wie folgt vorgenommen werden:
 
 1. Login als Root auf dem zukünftigen Wazuh Server
-2. Installieren von Wazuh mit vorbereiteten Regeln
+2. Installieren von Wazuh **mit** vorbereiteten Regeln
 ``` bash 
 curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/universal_installer/installer.sh | bash -s -- -a
 ```
@@ -43,7 +43,7 @@ firewall-cmd --reload
 
 ### Server Installation ohne Rules
 1. Login als Root auf dem zukünftigen Wazuh Server
-2. Installieren von Wazuh mit vorbereiteten Regeln
+2. Installieren von Wazuh **ohne** vorbereiteten Regeln
 ``` bash 
 curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/universal_installer/installer.sh | bash -s -- -n
 ```
