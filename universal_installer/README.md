@@ -26,7 +26,7 @@ curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Loggin
 ```
 
 ### Manuell
-Den Installer auf GitHub herunterladen und in ein `installer.sh` schreiben.
+Den Installer auf GitHub herunterladen und in ein `installer.sh` schreiben. Im Code unten muss der Parameter an der Stelle `<parameter>` eingefügt werden.
 ``` bash
 bash installer.sh <parameter>
 ```
