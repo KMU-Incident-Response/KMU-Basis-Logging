@@ -2,7 +2,7 @@
 
 echo "#####################################################
 # Willkommen zum Wazuh KMU Installer                #
-# Die Installation kann bis zu einer Stunde dauern  #
+# Die Installation kann bis zu einer Stunde dauern  #
 #####################################################
 
 Drücken Sie Ctrl+C um den Prozess abzubrechen"
@@ -85,12 +85,21 @@ setcap 'cap_net_bind_service=+ep' /usr/share/kibana/node/bin/node
 systemctl daemon-reload
 systemctl enable kibana --now
 
+# Agent Registration
+agent=$(cat /proc/sys/kernel/random/uuid | sed 's/[-]//g' | head -c 20)
+sed -i "s/<use_password>no</use_password>/<use_password>yes</use_password>/" /var/ossec/etc/ossec.conf
+echo $agent > /var/ossec/etc/authd.pass
+chmod 644 /var/ossec/etc/authd.pass
+chown root:wazuh /var/ossec/etc/authd.pass
+systemctl restart wazuh-manager
+
 webui=$(hostname -I | cut -d " " -f 1)
 
 echo "Password for user apm_system: $apm_system"
 echo "Password for user beats_system: $beats_system"
 echo "Password for user elastic: $elastic"
-echo "Password for user kibana: $kibana"
 echo "Password for user kibana_system: $kibana_system"
+echo "Password for user kibana: $kibana"
+echo "Password for Agent Registration: $agent"
 echo ""
 echo "Wazuh Instanz ist hier verfügbar https://$webui"
