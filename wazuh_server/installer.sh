@@ -87,7 +87,7 @@ systemctl enable kibana --now
 
 # Agent Registration
 agent=$(cat /proc/sys/kernel/random/uuid | sed 's/[-]//g' | head -c 20)
-sed -i "s/<use_password>no</use_password>/<use_password>yes</use_password>/" /var/ossec/etc/ossec.conf
+sed -i "s/<use_password>no<\/use_password>/<use_password>yes<\/use_password>/" /var/ossec/etc/ossec.conf
 echo $agent > /var/ossec/etc/authd.pass
 chmod 644 /var/ossec/etc/authd.pass
 chown root:wazuh /var/ossec/etc/authd.pass
