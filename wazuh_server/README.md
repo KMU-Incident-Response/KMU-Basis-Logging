@@ -7,12 +7,12 @@ Die Installation ausgelegt auf KMUs und bietet sinnvolle Standardeinstellungen.
 **Achtung:** Zur Zeit werden nur debian basierte Systeme unterstützt. Es wird [Ubuntu 20.04 LTS](https://releases.ubuntu.com/20.04.4/ubuntu-20.04.4-live-server-amd64.iso) empfohlen.
 
 ## Installation
-Die Installation kann wie folgt vorgenommen werden:
+Die Installation wird über den [universal Installer](../universal_installer/README.md) verrichten und kann wie folgt vorgenommen werden:
 
 1. Login als Root auf dem zukünftigen Wazuh Server
-2. Installieren von Wazuh mit dem Installer
+2. Installieren von Wazuh mit vorbereiteten Regeln
 ``` bash 
-wget -O - https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/wazuh_server/installer.sh | bash
+curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/universal_installer/installer.sh | bash -s -- -a
 ```
 3. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich
 
@@ -39,3 +39,12 @@ firewall-cmd --permanent --add-port={443,514,1514,1515,1516,9200,55000}/tcp
 firewall-cmd --permanent --add-port={514,1514}/udp
 firewall-cmd --reload
 ```
+
+
+### Server Installation ohne Rules
+1. Login als Root auf dem zukünftigen Wazuh Server
+2. Installieren von Wazuh mit vorbereiteten Regeln
+``` bash 
+curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/universal_installer/installer.sh | bash -s -- -n
+```
+3. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich
