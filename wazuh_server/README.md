@@ -41,7 +41,7 @@ firewall-cmd --reload
 ```
 
 
-### Server Installation ohne Rules
+### Optional: Server Installation ohne Rules
 1. Login als Root auf dem zukünftigen Wazuh Server
 2. Installieren von Wazuh **ohne** vorbereiteten Regeln
 ``` bash 
