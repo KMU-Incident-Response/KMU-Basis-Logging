@@ -12,4 +12,4 @@ Dieses Repository stellt foglende Komponenten zur Verfügung:
 ## Quick Start
 Es wird empfohlen die vollständige Installation vorzunehmen.
 
-Die vollständige Installation wird [hier](wazuh_server/README.md#Installation) erklärt.
+Die vollständige Installation wird [hier](universal_installer/README.md#Installation) erklärt.

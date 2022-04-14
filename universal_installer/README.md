@@ -43,7 +43,7 @@ firewall-cmd --reload
 ```
 
 
-## Bedienung
+## Bedienung universal Installer
 Der Wazuhinstaller kann automatisch mit `curl` ausgeführt werden oder manuell heruntergeladen werden und als CLI Tool verwendet werden.
 
 ### Parameter
