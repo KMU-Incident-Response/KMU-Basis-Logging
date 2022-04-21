@@ -1,5 +1,5 @@
 # KMU Basis Logging
-
+![GitHub](https://img.shields.io/github/license/KMU-Incident-Response/KMU-Basis-Logging)
 ## Inhalt
 Dieses Repository stellt foglende Komponenten zur Verfügung:
 
