@@ -1,5 +1,5 @@
-![GitHub](https://img.shields.io/github/license/KMU-Incident-Response/KMU-Basis-Logging)
 # KMU Basis Logging
+![GitHub](https://img.shields.io/github/license/KMU-Incident-Response/KMU-Basis-Logging)
 
 Für eine Übersicht über das gesamte KMU-Incident-Response Projekt, starte bitte bei [KMU-Incident-Response](https://github.com/KMU-Incident-Response).
 
