@@ -43,13 +43,13 @@ firewall-cmd --reload
 ```
 
 ### Weiteres vorgehen
-Wazuh braucht noch weitere Software, um voll Funktionsfähig zu sein. 
+Wazuh braucht noch weitere Software, um voll funktionsfähig zu sein. 
 Anleitung für die Installation dieser Software findest du im [Installationsguide](https://github.com/KMU-Incident-Response/KMU-Security-Best-Practices/releases/latest/download/installation-guide-OSS.pdf)
 
 --- 
 
 
-## Allgemeine bedienung Universal Installer
+## Allgemeine Bedienung Universal Installer
 Der Wazuhinstaller kann automatisch mit `curl` ausgeführt werden oder manuell heruntergeladen werden und als CLI Tool verwendet werden.
 
 ### Parameter
