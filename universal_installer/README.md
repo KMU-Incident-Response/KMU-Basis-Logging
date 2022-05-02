@@ -16,7 +16,9 @@ Die Installation wird über den universal Installer verrichten und kann wie folg
 ``` bash 
 curl -s https://raw.githubusercontent.com/KMU-Incident-Response/KMU-Basis-Logging/main/universal_installer/installer.sh | bash -s -- -a
 ```
-3. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich
+Am Ende des Installers werden in der Shell alle gesetzten Passwörter angezigt. **Diese sollten sicher aufbewahrt werden!**
+
+3. Login auf dem Web UI mit dem Elastic User und dem Passwort in der Shell ersichtlich.
 
 
 ### Firewall
