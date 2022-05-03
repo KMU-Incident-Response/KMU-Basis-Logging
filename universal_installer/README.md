@@ -9,6 +9,8 @@ Die Installation ausgelegt auf KMUs und bietet sinnvolle Standardeinstellungen.
 **Achtung:** Zur Zeit werden nur debian basierte Systeme unterstützt. Es wird [Ubuntu 20.04 LTS](https://releases.ubuntu.com/20.04.4/ubuntu-20.04.4-live-server-amd64.iso) empfohlen.
 
 ## Installation
+![GitHub](https://img.shields.io/badge/Installationszeit-30%20Minuten-informational)
+
 Die Installation wird über den universal Installer verrichten und kann wie folgt vorgenommen werden:
 
 1. Login als Root auf dem zukünftigen Wazuh Server
