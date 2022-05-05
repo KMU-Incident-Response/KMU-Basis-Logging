@@ -58,8 +58,7 @@ curl -so /etc/filebeat/filebeat.yml https://packages.wazuh.com/resources/4.2/ela
 curl -so /etc/filebeat/wazuh-template.json https://raw.githubusercontent.com/wazuh/wazuh/4.2/extensions/elasticsearch/7.x/wazuh-template.json
 chmod go+r /etc/filebeat/wazuh-template.json
 curl -s https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.1.tar.gz | tar -xvz -C /usr/share/filebeat/module
-echo "
-output.elasticsearch.password: $elastic" >> /etc/filebeat/filebeat.yml
+sed -i "s/output.elasticsearch.password: <elasticsearch_password>/output.elasticsearch.password: $elastic/" /etc/filebeat/filebeat.yml
 cp -r /etc/elasticsearch/certs/ca/ /etc/filebeat/certs/
 cp /etc/elasticsearch/certs/elasticsearch.crt /etc/filebeat/certs/filebeat.crt
 cp /etc/elasticsearch/certs/elasticsearch.key /etc/filebeat/certs/filebeat.key
