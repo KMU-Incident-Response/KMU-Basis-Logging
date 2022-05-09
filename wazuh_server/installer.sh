@@ -48,7 +48,7 @@ done < <(printf '%s\n' "$output")
 curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
 echo "deb https://packages.wazuh.com/4.x/apt/ stable main" > /etc/apt/sources.list.d/wazuh.list
 apt-get update
-apt-get install wazuh-manager
+apt-get install wazuh-manager=4.2.6-1
 systemctl daemon-reload
 systemctl enable wazuh-manager --now
 
